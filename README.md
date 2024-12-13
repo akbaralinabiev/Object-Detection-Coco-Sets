@@ -4,7 +4,7 @@ This project demonstrates object detection using the YOLOv3 model within a Strea
 
 **Features:**
 
-* **Video Upload:** Upload video files (MP4, AVI) for object detection.
+**Video Upload:** Upload video files (MP4, AVI) for object detection.
 * **YOLOv3 Model:** Utilizes the pre-trained YOLOv3 model for accurate object detection.
 * **CUDA Acceleration:** Leverages CUDA for faster processing on GPU-enabled systems (optional).
 * **Real-time Visualization:** Displays the video with detected objects in real-time within the Streamlit app.
