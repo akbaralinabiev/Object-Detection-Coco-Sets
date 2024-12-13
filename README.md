@@ -24,7 +24,7 @@ This project demonstrates object detection using the YOLOv3 model within a Strea
    ```bash
    pip install streamlit opencv-python numpy imutils
 
-2. # Install CUDA (optional)
+2. ## Install CUDA (optional)
 * If you have a CUDA-enabled GPU, follow the instructions on the NVIDIA website to install the CUDA Toolkit.
 
 * Download YOLOv3 files:
@@ -35,7 +35,7 @@ This project demonstrates object detection using the YOLOv3 model within a Strea
 * Download coco.names from the COCO dataset repository.
 * Place this file in the object_detection_streamlit directory.
 
-# Run the Streamlit app:
+## Run the Streamlit app:
     streamlit run app.py 
 
 * Upload a video: Click the "Choose a video file" button and select the video you want to process.
@@ -48,23 +48,23 @@ This project demonstrates object detection using the YOLOv3 model within a Strea
 * yolov3.cfg: The YOLOv3 model configuration file.
 * coco.names: A text file containing the names of the object classes from the COCO dataset.
 
-# Note:
+## Note:
 
 * This project requires the YOLOv3 weights file (yolov3.weights) and configuration file (yolov3.cfg) to be in the same directory.
 * For optimal performance, ensure you have a CUDA-enabled GPU and have installed the CUDA Toolkit.
 * The imutils library provides helper functions for image and video processing.
 
-# To improve this project:
+## To improve this project:
 
 * Consider adding options for adjusting confidence thresholds and Non-Maximum Suppression (NMS) parameters.
 * Implement a more user-friendly interface with sliders or input fields for adjusting parameters.
 * Explore more advanced object detection models like YOLOv5 or EfficientDet.
 * Integrate with other Streamlit features like caching or progress bars for a smoother user experience.
 
-# Open app.py in your preferred text editor
+## Open app.py in your preferred text editor
     nano app.py
 
-# Paste the following content into app.py:
+## Paste the following content into app.py:
 * echo "import streamlit as st
 * import os
 * import cv2
@@ -72,19 +72,19 @@ This project demonstrates object detection using the YOLOv3 model within a Strea
 * import imutils
 * import time
 
-# Let's load the YOLO model first
+## Let's load the YOLO model first
 * net = cv2.dnn.readNet(\"yolov3.weights\", \"yolov3.cfg\")
 * net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)  # we used the CUDA backend for better performance
 * net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)  # Run on GPU if available
 
-# Load the names of object classes from COCO dataset file in the directory(coco.names)
+## Load the names of object classes from COCO dataset file in the directory(coco.names)
 with open(\"coco.names\", \"r\") as f:
     classes = [line.strip() for line in f.readlines()]
 
-# Set up the title for the app
+## Set up the title for the app
 * st.title(\"Object Detection Project for Deep Learning Class\")
 
-# Let the user upload a video file
+## Let the user upload a video file
 uploaded_file = st.file_uploader(\"Choose a video file\", type=[\"mp4\", \"avi\"])
 if uploaded_file is not None:
     # Save the uploaded file in a temporary folder
@@ -92,4 +92,3 @@ if uploaded_file is not None:
         # Create the folder if it doesn't exist
         os.makedirs(\"temp\")
     " > app.py# Object-Detection-in-Pyhton
-# Object-Detection-Coco-Sets
